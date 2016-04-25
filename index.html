@@ -2,22 +2,64 @@
 layout: default
 ---
 
-<div class="home">
+<div class="primary"> <!-- .primary -->
 
-  <h1 class="page-heading">Posts</h1>
+  <main class="site-main"> <!-- .site-main -->
+    <div class="posts">
+      <h4 class="page-subheading">My Work</h4>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      {% for post in site.posts %} <!-- site.posts for loop START -->
+        {% assign currentdate = post.date | date: "%Y" %} <!-- "%B %d, %Y" = April 22, 2016 -->
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        {% if currentdate != date %} <!-- currentdate if START -->
+          <div class="separator">
+            <div class="horizontal-sep">
+              <div class="vertical-sep"></div>
+            </div>
+          </div>
+          <h4 id="y{{post.date | date: " %Y"}}" class="entry-year">{{ currentdate }}</h4>
+          {% assign date = currentdate %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        {% endif %} <!-- currentdate if END -->
 
-</div>
+        {% if post.home-layout == 'wide-layout' %}
+          <article class="post-excerpt wide-layout"> <!-- .post -->
+        {% else if post.home-layout == 'square-layout' %}
+          <article class="post-excerpt square-layout"> <!-- .post -->
+        {% endif %}
+        {% if post.image %}
+          <div class="post-thumbnail">
+            <img class="attachment-post-thumbnail" src="{{ post.thumb-image-path }}{{ post.image }}" alt="{{ post.title }}">
+            <div class="thumb-cover"></div>
+            <!--<div class="attachment-post-thumbnail" style="background-image: url('{{ post.thumb-image-path }}{{ post.image }}');"></div>-->
+          </div>
+        {% endif %}
+
+          <div class="post-content"> <!-- .post-content -->
+
+            <div class="entry-header"> <!-- .entry-header -->
+              <h2 class="entry-title">
+                <a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+                <!--{{ post.title }}-->
+              </h2>
+            </div> <!-- .entry-header -->
+
+            <div class="entry-content"> <!-- .entry-content -->
+              <p class="post-desc">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+            </div> <!-- .entry-content -->
+          </div> <!-- .post-content -->
+          <a class="cover-link" href="{{ post.url }}" rel="bookmark"></a>
+
+        </article> <!-- .post -->
+
+      {% endfor %} <!-- site.posts for loop END -->
+      <!--<div class="separator">-->
+        <!--<div class="horizontal-sep">-->
+          <!--<div class="vertical-sep"></div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<h4 class="post-end">End</h4>-->
+    </div>
+  </main> <!-- .site-main -->
+
+</div> <!-- .primary -->
