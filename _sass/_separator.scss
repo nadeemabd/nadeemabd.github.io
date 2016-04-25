@@ -1,0 +1,28 @@
+.page-subheading, .entry-year, .site-end {
+  color: #888;
+  line-height: 1;
+}
+.page-subheading {
+  margin-bottom: $spacing-unit/2;
+}
+.entry-year {
+  margin-bottom: $spacing-unit;
+}
+.separator {
+  margin-bottom: $spacing-unit/2;
+}
+.horizontal-sep {
+  position: relative;
+  width: 25px;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+.vertical-sep {
+  height: 100px;
+  width: 1px;
+  background-color: #888;
+  margin: 0 auto;
+}
+.site-end {
+  margin-bottom: $spacing-unit*2;
+}

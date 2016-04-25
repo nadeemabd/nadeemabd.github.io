@@ -1,0 +1,12 @@
+.single {
+  .post-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 100px;
+  }
+  .attachment-post-thumbnail {
+    padding: 250 / 1170 * 100%;
+  }
+}

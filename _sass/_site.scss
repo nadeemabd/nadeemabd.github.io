@@ -1,0 +1,18 @@
+.site-main .posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.site-branding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.site-title, .post-title {
+  font-family: MenschThin;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
