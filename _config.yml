@@ -6,41 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Nadeem Abdulla
-#email: anadeem92@yahoo.co.in
 description: > # this means to ignore newlines until "baseurl:"
   Hello.<br>I'm Nadeem Abdulla.<br>Welcome to my portfolio.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # the base hostname & protocol for your site
-twitter_username: nadeemabd
-github_username:  nadeemabd
-
-port: 4444
 
 # Build settings
 markdown: kramdown
-
-gems:
-  - octopress-autoprefixer
-  - jekyll-minimagick
-
-mini_magick:
-    wide:
-        source: /assets/images/og
-        destination: /assets/images/wide
-        resize: "480x300"
-    square:
-        source: /assets/images/og
-        destination: /assets/images/square
-        resize: "600x400"
-    thumb:
-        source: /assets/images/og
-        destination: /assets/images/thumb
-        resize: "600x400"
-    feature:
-        source: /assets/images/og
-        destination: /assets/images/feature
-        resize: "1920x1200"
 
 defaults:
   -
