@@ -1,0 +1,40 @@
+@include media-query($tablet) {
+  .site-title, .post-title {
+    @include font-size(6);
+  }
+  .post.excerpt {
+    &.wide-layout {
+      display: block;
+      max-width: 600px;
+    }
+  }
+}
+
+@include media-query($mobile) {
+  .site-title, .post-title {
+    @include font-size(4.8);
+  }
+  .post-subtitle {
+    @include font-size(3);
+  }
+  .post .content {
+    p {
+      margin-bottom: $spacing-unit/2;
+      &.no-padding {
+        margin-right: -30px;
+        margin-left: -30px;
+      }
+    }
+  }
+  .post-content {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .img-align-left {
+    margin-left: -30px;
+  }
+  .img-align-right {
+    margin-right: -30px;
+  }
+}

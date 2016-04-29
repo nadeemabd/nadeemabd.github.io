@@ -1,0 +1,160 @@
+.main-navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: flex-end;
+  //text-align: right;
+}
+
+.main-menu {
+  //display: none;
+  //position: relative;
+  //background-color: yellow;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    @include font-size(1.6);
+    position: relative;
+    color: $text-color;
+    display: block;
+    padding: $spacing-unit/3 $spacing-unit;
+
+    /* Right hover border */
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  width: 2px;
+    //  height: $spacing-unit;
+    //  right: 0;
+    //  top: (16px*$base-line-height)/3;
+    //  background-color: $text-color;
+    //  z-index: -1;
+    //  //border-radius: 4px;
+    //}
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      left: 50%;
+      bottom: 0;
+      background-color: $text-color;
+      z-index: -1;
+      //border-radius: 4px;
+    }
+    &:hover,
+    &:focus {
+      //background-color: red;
+      //color: #fff;
+      text-decoration: none;
+
+      /* Right hover border */
+      //&:after {
+      //  width: 100%;
+      //  background-color: $link-color;
+      //}
+      &:after {
+        width: 100%;
+        //background-color: $link-color;
+        margin-left: -50%;
+      }
+    }
+  }
+}
+a.home-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 20;
+  svg {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    width: 50%;
+    height: auto;
+  }
+  .arrow {
+    stroke: #ddd;
+    stroke-linecap: round;
+    fill: none;
+  }
+  &:hover,
+  &:focus {
+    background-color: $link-color;
+    .arrow {
+      stroke: #fff;
+
+    }
+  }
+}
+/*Hide checkbox*/
+//input[type=checkbox]{
+//  display: none;
+//}
+/*Show menu when invisible checkbox is checked*/
+//input[type=checkbox]:checked ~ .main-menu {
+//  display: block;
+//}
+//.menu-icon {
+//  padding-top: 15px;
+//  padding-right: 15px;
+//  cursor: pointer;
+//  display: block;
+//  > svg {
+//    width: 25px;
+//    height: 23px;
+//
+//    path {
+//      fill: $grey-color-dark;
+//    }
+//  }
+//}
+
+@include media-query($mobile) {
+  .main-navigation {
+    left: 0;
+    width: 100%;
+    //flex-direction: column;
+    //align-items: flex-end;
+    //text-align: right;
+  }
+
+  .main-menu {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        flex: 0 1 auto;
+      }
+    }
+    a {
+      text-align: center;
+      padding: 15px 0;
+      margin: $spacing-unit/3;
+      &:after {
+        //width: 100%;
+        //height: 2px;
+        //left: 0;
+        //top: 0;
+      }
+      &:hover,
+      &:focus {
+        &:after {
+          //height: 10px;
+          //width: 100%;
+        }
+      }
+    }
+  }
+}
