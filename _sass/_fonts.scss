@@ -10,49 +10,6 @@
 }
 
 @font-face {
-  font-family: 'MerriweatherRegular';
-  src: url($font-face-src + 'Merriweather-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MerriweatherBold';
-  src: url($font-face-src + 'Merriweather-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MerriweatherItalic';
-  src: url($font-face-src + 'Merriweather-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DroidSerif';
-  src: url($font-face-src + 'DroidSerif.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DroidSerifBold';
-  src: url($font-face-src + 'DroidSerif-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'DroidSerifItalic';
-  src: url($font-face-src + 'DroidSerif-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@font-face {
   font-family: 'PTSerif';
   src: local('PTSerif Regular'), local('PT_Serif-Web-Regular'), url($font-face-src + 'PT_Serif-Web-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -78,26 +35,4 @@
   src: local('PTSerif BoldItalic'), local('PT_Serif-Web-BoldItalic'), url($font-face-src + 'PT_Serif-Web-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'BitterRegular';
-  src: url($font-face-src + 'Bitter-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BitterBold';
-  src: url($font-face-src + 'Bitter-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BitterItalic';
-  src: url($font-face-src + 'Bitter-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
