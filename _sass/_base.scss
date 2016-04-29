@@ -25,7 +25,10 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-family: $base-font-family;
+    @include  font-size(1.8);
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
     color: $text-color;
     background-color: $background-color;
     font-feature-settings: "kern" 1;
@@ -73,41 +76,77 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin: 0 0 $spacing-unit $spacing-unit;
+    padding: 0;
 }
 
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 $spacing-unit $spacing-unit;
+}
+
+/**
+ * Tables
+ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    table-layout: fixed;
+    margin: 0 0 $spacing-unit;
+    width: 100%;
+    th {
+        text-align: left;
+    }
+    th, td {
+        border: 1px solid #eee;
+        padding: $spacing-unit/3;
     }
 }
 
-
-
 /**
- * Headings
+ * HR
  */
-h1, h2, h3, h4, h5, h6 {
-    clear: both;
-    font-weight: $base-font-weight;
-    text-rendering: optimizeLegibility;
-    line-height: $base-line-height;
+hr {
+    background-color: #eee;
+    border: 0;
+    height: 1px;
+    margin-bottom: $spacing-unit;
 }
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: $link-color;
     text-decoration: none;
-
+    transition: all ease .5s;
+    &:after {
+        transition: all ease .5s;
+    }
     &:visited {
-        color: darken($brand-color, 15%);
+        //color: darken($link-color, 15%);
+        color: $link-color;
     }
 
     &:hover {
-        color: $text-color;
+        //color: $text-color;
         text-decoration: underline;
     }
 }
@@ -117,13 +156,20 @@ a {
 /**
  * Blockquotes
  */
+blockquote, q {
+    quotes: none;
+    &:before,
+    &:after {
+        content: "";
+    }
+}
 blockquote {
+    text-align: center;
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+    //border-left: 4px solid $grey-color-light;
+    //padding-left: $spacing-unit / 2;
+    //font-style: italic;
+    @include font-size(2.4);
 
     > :last-child {
         margin-bottom: 0;
@@ -187,4 +233,8 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+article {
+    transition: all ease .5s;
 }

@@ -50,3 +50,54 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'PTSerif';
+  src: local('PTSerif Regular'), local('PT_Serif-Web-Regular'), url($font-face-src + 'PT_Serif-Web-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: local('PTSerif Bold'), local('PT_Serif-Web-Bold'), url($font-face-src + 'PT_Serif-Web-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: local('PTSerif Italic'), local('PT_Serif-Web-Italic'), url($font-face-src + 'PT_Serif-Web-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: local('PTSerif BoldItalic'), local('PT_Serif-Web-BoldItalic'), url($font-face-src + 'PT_Serif-Web-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'BitterRegular';
+  src: url($font-face-src + 'Bitter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BitterBold';
+  src: url($font-face-src + 'Bitter-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BitterItalic';
+  src: url($font-face-src + 'Bitter-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

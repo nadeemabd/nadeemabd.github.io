@@ -1,6 +1,7 @@
 .page-subheading, .entry-year, .site-end {
   color: #888;
   line-height: 1;
+  @include font-size(2.4);
 }
 .page-subheading {
   margin-bottom: $spacing-unit/2;

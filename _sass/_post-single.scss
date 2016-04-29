@@ -1,12 +1,87 @@
-.single {
-  .post-header {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 100px;
+.post .content {
+  background-color: #fff;
+  margin-bottom: $spacing-unit;
+  p {
+    margin-bottom: $spacing-unit;
+    &.no-padding {
+      max-width: none;
+      display: block;
+      margin-right: -(($site-width - $content-width)/$content-width)/2*100%;
+      margin-left: -(($site-width - $content-width)/$content-width)/2*100%;
+      img {
+        margin-bottom: 0;
+      }
+    }
   }
-  .attachment-post-thumbnail {
-    padding: 250 / 1170 * 100%;
+  img {
+    margin-bottom: $spacing-unit/2;
+  }
+  .post-meta {
+    text-align: right;
+    margin-right: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    color: #888;
+  }
+}
+
+.post-header {
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+
+.post-feature-image {
+  //margin-bottom: $spacing-unit * 2;
+}
+
+.attachment-post-feature {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 300 / 1170 * 100%;
+}
+
+.post-subtitle {
+  @include font-size(3.6);
+  text-align: center;
+  color: #888;
+  margin-bottom: $spacing-unit*2;
+  font-weight: normal;
+}
+
+.post-content {
+  max-width: $content-width/$site-width*100%;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.img-align-left {
+  float: left;
+  margin-right: $spacing-unit;
+  margin-left: -(($site-width - $content-width)/$content-width)/2*100%;
+  max-width: 50%;
+}
+
+.img-align-right {
+  float: right;
+  margin-left: $spacing-unit;
+  margin-right: -(($site-width - $content-width)/$content-width)/2*100%;
+  max-width: 50%;
+}
+
+.block-link {
+  display: table;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    height: $base-line-height*$base-font-size;
+    width: 3px;
+    top: 0;
+    left: -$spacing-unit;
+    background-color: $link-color;
   }
 }

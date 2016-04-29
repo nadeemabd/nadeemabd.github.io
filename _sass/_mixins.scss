@@ -1,7 +1,7 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-  font-size: floor($sizeValue * 16) * 1px;
-  font-size: $sizeValue * 1.6rem;
+  font-size: floor($sizeValue * 10) * 1px;
+  font-size: $sizeValue * 1rem;
   //@media screen and (min-width: 56.25em) {
   //  font-size: floor($sizeValue * 18) * 1px;
   //  font-size: $sizeValue * 1.8rem;

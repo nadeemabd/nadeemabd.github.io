@@ -1,18 +1,38 @@
-h1 {
-  @include font-size(4.5); // 72
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  //clear: both;
+  font-weight: $base-font-weight;
+  text-rendering: optimizeLegibility;
+  line-height: $base-line-height;
+  margin-bottom: $spacing-unit/2;
 }
-h2 {
-  @include font-size(2.25); // 36
-}
-h3 {
-  @include font-size(1.5); // 24
-}
-h4 {
-  @include font-size(1.25); // 20
-}
-h5 {
-  @include font-size(0.875); // 14
-}
-h6 {
-  @include font-size(0.75); // 12
+
+.post .content {
+  h1 {
+    @include font-size(7.2); // 72px
+    font-family: MenschThin;
+  }
+  h2 {
+    @include font-size(3.6); // 36px
+  }
+  h3 {
+    @include font-size(2.4); // 24px
+  }
+  h4 {
+    @include font-size(2); // 20px
+  }
+  h5 {
+    @include font-size(1.4); // 14px
+  }
+  h6 {
+    @include font-size(1.2); // 12px
+  }
+  h2, h3, h4 {
+    font-weight: bold;
+  }
+  h4 {
+    text-transform: uppercase;
+  }
 }
