@@ -1,14 +1,22 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post single" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
   </header>
-
-  <div class="post-content">
-    {{ content }}
+  <div class="content">
+    {% if page.image %}
+    <div class="post-feature-image">
+      <!--<img src="{{ page.feature-image-path }}{{ page.image }}" alt="{{ page.title }}">-->
+      <div class="attachment-post-feature" style="background-image: url('{{ page.feature-image-path }}{{ page.image }}');" itemprop="image"></div>
+    </div>
+    {% endif %}
+    <div class="post-content" itemprop="articleBody">
+      <p class="post-subtitle">{{ page.subtitle }}</p>
+      {{ content }}
+    </div>
   </div>
 
 </article>

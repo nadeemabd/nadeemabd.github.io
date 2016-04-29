@@ -23,9 +23,9 @@ layout: default
         {% endif %} <!-- currentdate if END -->
 
         {% if post.home-layout == 'wide-layout' %}
-          <article class="post-excerpt wide-layout"> <!-- .post -->
+          <article class="post excerpt wide-layout"> <!-- .post -->
         {% else if post.home-layout == 'square-layout' %}
-          <article class="post-excerpt square-layout"> <!-- .post -->
+          <article class="post excerpt square-layout"> <!-- .post -->
         {% endif %}
         {% if post.image %}
           <div class="post-thumbnail">
@@ -35,7 +35,7 @@ layout: default
           </div>
         {% endif %}
 
-          <div class="post-content"> <!-- .post-content -->
+          <div class="post-excerpt"> <!-- .post-content -->
 
             <div class="entry-header"> <!-- .entry-header -->
               <h2 class="entry-title">
